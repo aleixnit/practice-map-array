@@ -1,23 +1,33 @@
 function doubleNumbers(arr) {
   // your code here
+  return arr.map((x) => x * 2);
 }
 
 console.log(doubleNumbers([2, 5, 100])); // [4, 10, 200]
 
 function stringItUp(arr) {
   // your code here
+  return arr.toString();
 }
+
 
 console.log(stringItUp([2, 5, 100])); // ["2", "5", "100"]
 
 function capitalizeNames(arr) {
   // your code here
+  // function capitalizarPrimeraLetra(arr) {
+  //   return arr.charAt(0).toUpperCase() + arr.slice(1);
+  // }
+  arrUpperCase = arr.map(function (string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  });
 }
 
 console.log(capitalizeNames(["john", "JACOB", "jinGleHeimer", "schmidt"])); // ["John", "Jacob", "Jingleheimer", "Schmidt"]
 
 function namesOnly(arr) {
   // your code here
+  return arr.map(x => x.name)
 }
 
 console.log(
@@ -48,9 +58,12 @@ console.log(
 
 function makeStrings(arr) {
   // your code here
+  // De cada objeto me quedo con la propiedad name
+  return arr.map(x => `${x.name} ${x.age >= 18? ' can go to the matrix' : 'is under the age'}`);
+
 }
 
-console.log(
+console.log("Marke Strings",
   makeStrings([
     {
       name: "Angelina Jolie",
